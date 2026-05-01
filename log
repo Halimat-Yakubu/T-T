@@ -1,0 +1,32 @@
+Starting day: Tuesday, April 7
+wrote the web copy and mapped out the basic design of the site
+Wrote the html for the nav, hero and countdown sections: 61 lines.
+
+styled the navbar and hero sections 84 lines of css2?family3 hours approx
+
+In CSS, the z-index property controls the stacking order of elements along the z-axis (front-to-back) when elements overlap.
+
+countdiwn section. 1 hr plus
+
+Key Points:
+Higher z-index value → element appears in front of elements with lower values.
+Lower z-index value → element appears behind elements with higher values.
+Only works on positioned elements (position: relative, absolute, fixed, or sticky) or on flex/grid items.
+Default value is auto (follows the natural HTML stacking order).
+
+The overflow property specifies whether to clip content or to add scrollbars when an element's content is too big to fit in a specified area. can be set to scroll, hidden, auto, clip and default (visible). when it is set to hidden, the full content is displayed and not clipped. when set to scroll, the scrollbar appears.
+overflow-x : horizontal
+overflow-y : vertical
+
+The CSS clamp() function is used to set a value that will adjust responsively between a minimum value, a preffered value, and a maximum value depending on the size of the viewport.
+
+The clamp() function has three parameters: a minimum value, a preferred value, and a maximum value:
+
+ If the preferred value is between the min and max value, the preferred value is used
+ If the preferred value is smaller than the min value, the min value is used
+ If the preferred value is larger than the max value, the max value is used
+Version:
+
+
+9th april 
+did the story page. 2hrs
