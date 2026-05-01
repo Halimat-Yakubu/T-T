@@ -20,11 +20,8 @@ body {
 
 .nav-bar {
     position: fixed; top:0; left: 0; z-index: 100;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 10vh;
+    display: flex; justify-content: space-between; align-items: center;
+    width: 100%; height: 10vh;
     border-bottom: 1.5px solid var(--wine);
     background: var(--green);
     letter-spacing: 0.15rem;
@@ -32,64 +29,53 @@ body {
 }
 
 .nav-links {
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 1rem;
-    font-weight: 500;
+    text-align: center; text-transform: uppercase;
+    font-size: 0.9rem; font-weight: 500;
+    letter-spacing: 0.2rem;
 }
 
 .nav-links a {
     text-decoration: none;
-    /* color: var(--lavender); */
     color: var(--lightpink);
     margin-right: 5rem;   
 }
 
 .logo {
-    margin-left: 3rem;
-    color: var(--lightpink);
+    margin-left: 3rem; color: var(--lightpink);
 }
 
 .rsvp {
-    margin-right: 3rem;
-    text-decoration: none;
+    margin-right: 3rem; text-decoration: none;
     color: var(--gold);
 }
 
 #hero {
     padding-top: 7rem; 
-    display: flex; 
-    justify-content: center;
-    overflow: hidden;
-    background: var(--green);
-    color: var(--lavender);   
+    display: flex; justify-content: center; overflow: hidden;
+    background: var(--green); color: var(--lavender);   
 }
 
 .hero-main {
-    width: 80vw;
+    width: 80vw; height: 90vh;
     text-align: center;
-    height: 90vh;
 }
 
 .caption {
-    font-family: 'Caveat';
-    font-size: 1.2rem;
-    color: var(--lavender); opacity: 0.8;;
+    font-family: 'Dancing Script'; font-size: 1.2rem;
+    color: var(--gold); opacity: 0.8;;
 }
 
 .hero-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(4rem, 10vw, 8rem);font-weight: 700; 
+    font-size: clamp(4rem, 10vw, 8.5rem);font-weight: 700; 
     margin-top: 8rem;
     position: relative; z-index: 1;
 }
 
 .scroll-hint {
-    display: grid;
-    place-items: end center;
+    display: grid; place-items: end center;
     margin-top: 32vh;
-    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase;
-    opacity: 0.8;
+    font-size: 0.75rem; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8;
     color: var(--lightpink);
 }
 
@@ -102,7 +88,6 @@ body {
     position: absolute; inset: 0; z-index: 0;
     background:
       radial-gradient(ellipse 80% 60% at 20% 80%, rgba(255, 217, 217, 0.12) 0%, transparent 55%),
-     
       radial-gradient(ellipse 100% 80% at 50% 50%, rgba(255, 217, 217,0.5) 0%, transparent 60%);
   } 
  
@@ -116,6 +101,7 @@ body {
     z-index: 0;
     margin-top: 1.5rem;;
   }
+
   .snowflake-ring::before {
     content: '';
     position: absolute; inset: 20px;
@@ -125,28 +111,8 @@ body {
  
   @keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
  
-  .ice-dots {
-    position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    overflow: hidden;
-  }
-  
-  .ice-dot {
-    position: absolute;
-    width: 4px; height: 4px;
-    background: var(--gold-light);
-    border-radius: 50%;
-    opacity: 1;
-    animation: twinkle 3s ease-in-out infinite;
-  }
- 
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.5); }
-  }
-
 #countdown {
-    width: 100%;
-    height: 95vh;
+    width: 100%; height: 95vh;
     text-align: center;
     padding-top: 7rem;
     background-color: var(--lavender);
@@ -154,14 +120,13 @@ body {
 }
 
 .section-label {
-    font-family: 'Playfair Display', serif;
     font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 500; 
     color: var(--wine);
   }
 
-  .section-label em {
-    color: var(--rose);
+  .section-label span {
+    color: var(--rose); font-family: 'Dancing Script';
   }
 
   .countdown-grid {
@@ -181,15 +146,13 @@ body {
   }
 
   .countdown-quip {
-    font-family: 'Caveat';
-    font-size: 1.2rem;
-    margin-top: 4rem;
-    color: var(--green);
+    font-family: 'Dancing Script'; font-size: 1.2rem;
+    margin-top: 4rem; color: var(--green);
   }
 
 #story {
     width: 100%;
-    padding-top: 4rem;
+    padding-top: 5rem;
     background: var(--lavender);
 }
 
@@ -201,13 +164,27 @@ body {
 .navbar-bg {
     width: 20%;
 }
+
 .navcontainer {
-  background-color: var(--green);
-  position: sticky;
-    top: 0;
+    position: sticky; top: 0;
     height: 100vh;
     border-bottom: 1px solid var(--gold);
+     border-right: 1px solid var(--gold);
+    background-color: var(--green);
 }
+
+.navcontainer ul {
+    margin-left: 2rem; margin-right: 1.5rem; padding-top: 30%;
+    font-size: 1.6rem; font-family: 'Playfair Display', serif;
+    letter-spacing: 0.3rem;
+    color: var(--lightpink);
+    list-style-type: none;
+}
+
+.navcontainer li {
+     margin-top: 4rem;
+}
+
 .chapters-bg {
     display: grid;
     place-items: center;
@@ -231,9 +208,8 @@ body {
     width: 70%;
     position: relative;
     border: 1px #1a1208 solid;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Dancing Script';
     height: 80vh;
-    
 }  
 
 .chapter1 h3, .chapter2 h3, .chapter3 h3, .chapter4 h3 {
@@ -246,6 +222,7 @@ body {
 .chapter1 p, .chapter2 p, .chapter3 p, .chapter4 p {
   width: 90%;
   line-height: 45px;
+  font-size: 1.5rem;
 }
 
 .chapter1 {
@@ -254,7 +231,7 @@ body {
 
 .aside {
   margin-top: 5rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
 }
 
 /* ── DETAILS ── */
@@ -278,11 +255,12 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.7rem; color: var(--gold);
     margin-bottom: 0.5rem;
+     letter-spacing: 0.2rem;
   }
  
   .detail-card p {
     font-size: 1rem; color: var(--lavender);
-    line-height: 1.6;
+    line-height: 1.6;  letter-spacing: 0.1rem;
   }
 
   .details-grid:last-child {
