@@ -374,12 +374,13 @@ body {
  
   .map-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem; color: var(--wine);
+    font-size: 1.6rem; color: var(--wine);
     margin-bottom: 0.5rem;
   }
  
   .map-sub {
-    font-size: 0.85rem; color: var(--green); margin-bottom: 2rem;
+    font-size: 1rem; color: var(--green); margin-bottom: 2rem;
+    font-family: 'Dancing Script';
   }
  
   .venue-map {
@@ -395,13 +396,14 @@ body {
     text-align: center;
     background: var(--green);
     color: var(--gold);
-    padding: 0.8rem 2rem;
+    padding: 0.9rem 2rem;
     border-radius: 4px;
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     margin-bottom: 2rem;
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Playfair Display';
+    font-weight: 800;
   }
  
   .tables-grid {
@@ -411,9 +413,9 @@ body {
   }
  
   .table-node {
-    border: 2px solid rgba(201,168,76,0.3);
+    border: 2px solid rgba(77, 0, 17, 0.5);
     border-radius: 50%;
-    width: 110px; height: 110px;
+    width: 120px; height: 120px;
     display: flex; flex-direction: column;
     align-items: center; justify-content: center;
     margin: 0 auto;
@@ -423,25 +425,28 @@ body {
   }
   .table-node:hover, .table-node.active {
     border-color: var(--gold);
-    background: var(--warm);
+    background: var(--wine);
+    color: var(--lightpink);
     transform: scale(1.06);
     box-shadow: 0 4px 20px rgba(201,168,76,0.25);
   }
  
   .table-node .t-num {
     font-family: 'Playfair Display', serif;
-    font-size: 0.7rem; color: var(--gold);
+    font-size: 0.8rem; color: var(--gold);
     text-transform: uppercase; letter-spacing: 0.1em;
   }
+
   .table-node .t-name {
     font-family: 'Playfair Display', serif;
     font-size: 0.85rem; font-weight: 700;
-    color: var(--deep); text-align: center;
+    text-align: center;
     padding: 0 0.3rem;
     line-height: 1.2;
   }
   .table-node .t-count {
-    font-size: 0.7rem; color: var(--sage); margin-top: 0.2rem;
+    font-size: 0.9rem;  margin-top: 0.2rem;
+    font-family: 'Dancing Script';
   }
  
   .table-tooltip {
