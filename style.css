@@ -137,6 +137,7 @@ body {
   .countdown-num {
     font-size: clamp(5rem, 12vw, 13rem);
     color: var(--wine);
+    font-family: 'Dancing Script';
   }
 
   .countdown-label {
