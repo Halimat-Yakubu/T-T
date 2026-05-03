@@ -474,4 +474,139 @@ body {
   .table-node:hover .table-tooltip { opacity: 1; }
   .table-tooltip strong { color: var(--gold-light); display: block; margin-bottom: 0.3rem; }
 
+ /* ── FAQ ── */
+  #faq { max-width: 720px; margin-left: 4.5rem; background: var(--lavender);} 
+
+  #faq .section-label {
+    padding-top: 3rem;
+    font-size: 1.2rem; font-family: 'Dancing Script';
+  }
+
+  #faq .section-title {
+    display: block;
+  }
  
+  .faq-item {
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 1.5rem 0;
+  }
+ 
+  .faq-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: var(--deep);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+  }
+  .faq-q .arrow {
+    color: var(--gold); transition: transform 0.2s; font-size: 1.2rem;
+  }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+ 
+  .faq-a {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem; color: var(--brown);
+    line-height: 1.7;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+  }
+  .faq-a.open { max-height: 300px; padding-top: 1rem; }
+
+/* ── RSVP ── */
+  #rsvp { text-align: center; width: 100vw; background: white;}
+ 
+  .formcontainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+     padding-bottom: 5rem;
+  }
+  .rsvp-form {
+    background: var(--wine);
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.06);
+    text-align: left;
+    max-width: 720px;
+   
+  }
+
+  #rsvp .section-label, #rsvp .section-title {
+    color: var(--green);
+  }
+ 
+  .form-group { margin-bottom: 1.5rem; }
+  .form-group label {
+    display: block; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--lightpink); margin-bottom: 0.5rem;
+  }
+ 
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(250, 210, 99, 0.5);
+    border-radius: 4px;
+    background: var(--cream);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+ 
+  .radio-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .radio-label {
+    display: flex; align-items: center; gap: 0.4rem;
+    cursor: pointer; font-size: 0.95rem; color: var(--brown);
+  }
+ 
+  .rsvp-success {
+    display: none;
+    text-align: center; padding: 2rem;
+    animation: fadeUp 0.4s ease;
+  }
+  .rsvp-success.visible { display: block; }
+  .rsvp-success .big-emoji { font-size: 4rem; margin-bottom: 1rem; }
+  .rsvp-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; color: var(--deep); margin-bottom: 0.5rem;
+  }
+  .rsvp-success p { color: var(--brown); font-family: 'Caveat', cursive; font-size: 1.1rem; }
+ 
+   /* ── FOOTER ── */
+  footer {
+    background: var(--green);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--lavender);
+  }
+  footer .f-names {
+    font-family: 'Dancing Script';
+    font-size: 2.5rem; color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  footer .f-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--lavender);
+  }
+  footer .f-small {
+    font-size: 0.75rem; margin-top: 2rem;
+    color: rgba(232,196,176,0.4);
+    letter-spacing: 0.1em;
+  }
+ 
+  /* ── RESPONSIVE ── */
+  @media(max-width: 600px) {
+    .tables-grid { grid-template-columns: repeat(2, 1fr); }
+    .countdown-grid { gap: 1rem; }
+    .countdown-block { min-width: 70px; }
+    .countdown-num { font-size: 2.5rem; }
+    nav { gap: 1rem; font-size: 0.7rem; }
+    .snowflake-ring { width: 300px; height: 300px; }
+  }

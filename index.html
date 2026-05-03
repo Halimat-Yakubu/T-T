@@ -186,5 +186,66 @@
     </div>
   </div>
 </section>
+
+<!-- FAQ -->
+<section id="faq">
+  <span class="section-label">All your questions</span>
+  <h2 class="section-title">Frequently Asked<br>Slightly Panicked Questions</h2>
+ 
+  <div class="faq-list" id="faqList"></div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp">
+  <span class="section-label">Make it official</span>
+  <h2 class="section-title">RSVP</h2>
+ <div class="formcontainer">
+  <div class="rsvp-form" id="rsvpForm">
+    <div class="form-group">
+      <label>Your Full Name</label>
+      <input type="text" id="rsvp-name" placeholder="The name your mother gave you">
+    </div>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" id="rsvp-email" placeholder="For the important stuff">
+    </div>
+    <div class="form-group">
+      <label>Attending?</label>
+      <div class="radio-group">
+        <label class="radio-label"><input type="radio" name="attending" value="yes"> 🎉 Absolutely, wouldn't miss it</label>
+        <label class="radio-label"><input type="radio" name="attending" value="no"> 😭 Can't make it (I'm devastated)</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Plus One?</label>
+      <select id="rsvp-plus">
+        <option value="none">Just me, solo and thriving</option>
+        <option value="yes">Yes, I'm bringing someone wonderful</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Dietary Requirements</label>
+      <input type="text" id="rsvp-diet" placeholder="Allergies, preferences, or strong opinions">
+    </div>
+    <div class="form-group">
+      <label>Anything to say to the couple?</label>
+      <textarea id="rsvp-msg" placeholder="Words of wisdom, embarrassing memories, terrible advice — all welcome"></textarea>
+    </div>
+    <button class="btn" onclick="submitRSVP()" style="width:100%;padding:1rem;">Send My RSVP ✨</button>
+  </div>
+ </div>
+  <div class="rsvp-success" id="rsvpSuccess">
+    <div class="big-emoji">🥂</div>
+    <h3>We got you!</h3>
+    <p id="rsvpSuccessMsg"></p>
+  </div>
+</section>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="f-names">Tife & Toki</div>
+  <div class="f-date">18 November 2026 · Edinburgh, Scotland</div>
+  <p class="f-small">Made with love, laughter, and the memory of a very memorable collision on an Edinburgh ice rink.</p>
+</footer>
 </body>
 </html>
