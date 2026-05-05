@@ -73,6 +73,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   font-size: 0.75rem; letter-spacing: 0.2em; 
   text-transform: uppercase; opacity: 0.8;
   margin-top: 32vh; color: var(--lightpink);
+  padding-bottom: 6rem; color: ;
 }
 
 .hero-date {
