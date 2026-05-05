@@ -1,0 +1,569 @@
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+
+:root {
+  --green: #102b1f;
+  --lavender: #d4f1f4;
+  --wine: #4d0011;
+  --lightpink:  #ffd9d9;
+  --rose: #bd7880;
+  --gold:  gold;
+}
+
+html { scroll-behavior: smooth; }
+
+body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
+
+.nav-bar {
+  position: fixed; top:0; left: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  width: 100%; height: 10vh;
+  border-bottom: 1.5px solid var(--wine);
+  background: var(--green);
+  font-family: 'Playfair Display', serif;  letter-spacing: 0.15rem;
+}
+
+.nav-links {
+  text-align: center; text-transform: uppercase;
+  font-size: 0.9rem; font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--lightpink);
+  margin-right: 5rem;   
+}
+
+.logo {
+  margin-left: 3rem; color: var(--lightpink);
+}
+
+.rsvp {
+  margin-right: 3rem; text-decoration: none;
+  color: var(--gold);
+}
+
+#hero {
+  padding-top: 7rem; 
+  display: flex; justify-content: center; overflow: hidden;
+  background: var(--green); color: var(--lavender);   
+}
+
+.hero-main {
+  width: 80vw; height: 90vh;
+  text-align: center;
+  display: grid; place-items: end center;
+}
+
+.caption {
+  font-family: 'Dancing Script'; font-size: 1.1rem;
+  color: var(--gold); opacity: 0.8;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(4rem, 10vw, 8.5rem); font-weight: 700; 
+  position: relative; z-index: 1; margin-top: 8rem;
+}
+
+.scroll-hint {
+  display: grid; place-items: end center;
+  font-size: 0.75rem; letter-spacing: 0.2em; 
+  text-transform: uppercase; opacity: 0.8;
+  margin-top: 32vh; color: var(--lightpink);
+}
+
+.hero-date {
+  font-family: 'Playfair Display', serif;
+  font-size: 23px; letter-spacing: 0.2em;
+}
+
+.hero-bg {
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(255, 217, 217, 0.12) 0%, transparent 55%),
+    radial-gradient(ellipse 100% 80% at 50% 50%, rgba(255, 217, 217,0.5) 0%, transparent 60%);
+} 
+ 
+.snowflake-ring {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 520px; height: 520px;
+  border: 1px dashed rgba(77, 0, 17, 0.5);
+  border-radius: 50%;
+  animation: slowSpin 60s linear infinite;
+  z-index: 0;
+  margin-top: 1.5rem;;
+}
+
+.snowflake-ring::before {
+  content: '';
+  position: absolute; inset: 20px;
+  border: 1px dashed var(--lavender);
+  border-radius: 50%;
+}
+ 
+@keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+ 
+#countdown {
+  width: 100%; height: 95dvh;
+  text-align: center; padding-top: 7rem;
+  background-color: var(--lavender);
+  font-family: 'Playfair Display', serif;
+}
+
+.section-label {
+  font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 500; 
+  color: var(--wine);
+}
+
+.section-label span {
+  color: var(--rose); font-family: 'Dancing Script';
+}
+
+.countdown-grid {
+  display: flex; justify-content: center; gap: 2rem; 
+  flex-wrap: wrap; margin-top: 0;
+}
+
+.countdown-num {
+  font-size: clamp(5rem, 12vw, 13rem); font-family: 'Dancing Script';
+  color: var(--wine);
+}
+
+.countdown-label {
+  font-size: 1rem; letter-spacing: 0.1em;
+  font-weight: 500; color: var(--wine);
+}
+
+.countdown-quip {
+  font-family: 'Dancing Script'; font-size: 1.2rem;
+  margin-top: 4rem; color: var(--green);
+}
+
+
+#story {
+  width: 100%; padding-top: 5rem; background: var(--lavender);
+}
+
+.story-container {
+  display: flex; border-top: 1px solid var(--green);
+}
+
+.navbar-bg { width: 20%;}
+
+.navcontainer {
+  position: sticky; top: 0;
+  border-bottom: 1px solid var(--gold); border-right: 1px solid var(--gold);
+  height: 100vh;  background-color: var(--green);
+}
+
+.navcontainer ul {
+  margin-left: 2rem; margin-right: 1.5rem; padding-top: 30%;
+  font-size: 1.6rem; font-family: 'Playfair Display', serif;
+  letter-spacing: 0.3rem;
+  color: var(--lightpink);
+  list-style-type: none;
+}
+
+.navcontainer li { margin-top: 4rem; }
+
+.chapters-bg { display: grid; place-items: center; width: 80%; }
+
+.chapter1 { margin-top: 4rem;}
+
+.chapter1, .chapter2, .chapter3, .chapter4 {
+  width: 70%;  font-family: 'Dancing Script';
+  border: 1px #1a1208 solid; border-radius: 4px; 
+  position: relative; margin-bottom: 2rem; padding: 2.5rem;
+}  
+
+.chapter1 h3, .chapter2 h3, .chapter3 h3, .chapter4 h3 {
+  margin-top: 0;  margin-bottom: 2rem;
+  font-size: 2.3rem; color: var(--wine);
+}
+
+.chapter1 p, .chapter2 p, .chapter3 p, .chapter4 p {
+  width: 95%; line-height: 45px; font-size: 1.5rem;
+}
+
+.aside { margin-top: 5rem; font-size: 1.3rem; }
+
+/* ── DETAILS ── */
+#details { text-align: center; background: var(--green);}
+ 
+#details .section-title {
+  font-size: 2.2rem; font-family: 'Dancing Script';
+  color: var(--lavender);  padding-top: 3rem;
+}
+
+.detail-icon {
+  font-size: 2rem; margin-bottom: 1rem; margin-top: 2rem;
+}
+ 
+.detail-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem; color: var(--gold);
+  margin-bottom: 0.5rem; letter-spacing: 0.2rem;
+}
+ 
+.detail-card p {
+  font-size: 1rem; color: var(--lavender);
+  line-height: 1.6;  letter-spacing: 0.1rem;
+}
+
+.details-grid:last-child {padding-bottom: 1.5rem; }
+
+#seating { text-align: center; padding-top: 5rem; background: whitesmoke}
+ 
+#seating .section-label {
+  font-family: 'Playfair Display', serif;
+}
+
+#seating .section-title {
+  font-family: 'Dancing Script'; margin-bottom: 4rem;
+}
+
+.seat-finder {
+  border-radius: 4px;
+  padding: 2.5rem; margin-bottom: 3rem;
+  box-shadow: 0 2px 20px rgba(16, 43, 31,0.3);
+  width: 70%;
+}
+ 
+.seat-finder p {
+  color: var(--wine); margin-bottom: 1.5rem; line-height: 1.7;
+}
+
+.finder-container {
+  display: flex;
+  justify-content: center;
+}
+ 
+.input-row {
+  display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;
+}
+ 
+.seat-input {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid rgba(250, 210, 99, 0.5);
+  border-radius: 4px;
+  background: var(--cream);
+  color: var(--ink);
+  flex: 1; min-width: 200px;
+  transition: border-color 0.2s;
+  outline: none;
+}
+
+.seat-input:focus { border-color: var(--gold); }
+ 
+.btn {
+  font-family: 'DM Sans', sans-serif;  font-weight: 500;
+  font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--green); color: var(--gold);
+  padding: 0.8rem 2rem;
+  border: none; border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.btn:hover { background: var(--wine); transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+ 
+.seat-result {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: var(--warm);
+  border-radius: 4px;
+  display: none;
+}
+.seat-result.visible { display: block; animation: fadeUp 0.4s ease; }
+ 
+.seat-result .table-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; color: var(--green);
+}
+
+.seat-result .table-desc {
+  font-family: 'Caveat', cursive;
+  font-size: 1.1rem; color: var(--gold);
+  margin-top: 0.3rem;
+}
+
+  .seat-result .table-quip {
+    color: var(--wine); font-size: 0.9rem; margin-top: 0.8rem; line-height: 1.6;
+  }
+
+    .seat-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--warm);
+    border-radius: 4px;
+    display: none;
+  }
+  .seat-result.visible { display: block; animation: fadeUp 0.4s ease; }
+ 
+  .seat-result .table-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem; color: var(--deep);
+  }
+  .seat-result .table-desc {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem; color: var(--gold);
+    margin-top: 0.3rem;
+  }
+  .seat-result .table-quip {
+    color: var(--brown); font-size: 0.9rem; margin-top: 0.8rem; line-height: 1.6;
+  }
+ 
+  /* ── SEATING MAP ── */
+  .map-wrapper {
+    background: whitesmoke;
+    border-radius: 4px;
+    padding: 2rem;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.06);
+  }
+ 
+  .map-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; color: var(--wine);
+    margin-bottom: 0.5rem;
+  }
+ 
+  .map-sub {
+    font-size: 1rem; color: var(--green); margin-bottom: 2rem;
+    font-family: 'Dancing Script';
+  }
+ 
+  .venue-map {
+    position: relative;
+    background: var(--lavender);
+    border-radius: 8px;
+    padding: 2.5rem 2rem;
+    min-height: 520px;
+    border: 1px dashed rgba(201,168,76,0.4);
+  }
+ 
+  .altar-zone {
+    text-align: center;
+    background: var(--green);
+    color: var(--gold);
+    padding: 0.9rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display';
+    font-weight: 800;
+  }
+ 
+  .tables-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+ 
+  .table-node {
+    border: 2px solid rgba(77, 0, 17, 0.5);
+    border-radius: 50%;
+    width: 120px; height: 120px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+  }
+  .table-node:hover, .table-node.active {
+    border-color: var(--gold);
+    background: var(--wine);
+    color: var(--lightpink);
+    transform: scale(1.06);
+    box-shadow: 0 4px 20px rgba(201,168,76,0.25);
+  }
+ 
+  .table-node .t-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.8rem; color: var(--gold);
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+
+  .table-node .t-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem; font-weight: 700;
+    text-align: center;
+    padding: 0 0.3rem;
+    line-height: 1.2;
+  }
+  .table-node .t-count {
+    font-size: 0.9rem;  margin-top: 0.2rem;
+    font-family: 'Dancing Script';
+  }
+ 
+  .table-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    left: 50%; transform: translateX(-50%);
+    background: var(--deep);
+    color: var(--cream);
+    padding: 0.8rem 1rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    min-width: 160px;
+    text-align: left;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.2s;
+    z-index: 10;
+    line-height: 1.5;
+  }
+  .table-tooltip::after {
+    content: '';
+    position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: var(--deep);
+  }
+  .table-node:hover .table-tooltip { opacity: 1; }
+  .table-tooltip strong { color: var(--gold-light); display: block; margin-bottom: 0.3rem; }
+
+ /* ── FAQ ── */
+  #faq { max-width:100vw;  padding-left: 4.5rem; background: whitesmoke;} 
+
+  #faq .section-label {
+    padding-top: 3.5rem;
+    font-size: 1.5rem; font-family: 'Dancing Script';
+  }
+
+  #faq .section-title {
+    display: block;
+    font-family: 'Playfair Display'; font-size: 2.2rem;
+  }
+ 
+  .faq-item {
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 1.5rem 0;
+  }
+ 
+  .faq-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: var(--deep);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
+  }
+  .faq-q .arrow {
+    color: var(--gold); transition: transform 0.2s; font-size: 1.2rem;
+  }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+ 
+  .faq-a {
+    font-family: 'Caveat', cursive;
+    font-size: 1.1rem; color: var(--brown);
+    line-height: 1.7;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+  }
+  .faq-a.open { max-height: 300px; padding-top: 1rem; }
+
+/* ── RSVP ── */
+  #rsvp { text-align: center; width: 100vw; background: whitesmoke; padding-top: 4rem;}
+ 
+  .formcontainer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+     padding-bottom: 5rem;
+  }
+  .rsvp-form {
+    background: var(--wine);
+    border-radius: 4px;
+    padding: 2.5rem;
+    box-shadow: 0 2px 20px rgba(26,18,8,0.06);
+    text-align: left;
+    max-width: 720px;
+   
+  }
+
+  #rsvp .section-label, #rsvp .section-title {
+    color: var(--green);
+  }
+ 
+  .form-group { margin-bottom: 1.5rem; }
+  .form-group label {
+    display: block; font-size: 0.8rem;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--lightpink); margin-bottom: 0.5rem;
+  }
+ 
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+    border: 2px solid rgba(250, 210, 99, 0.5);
+    border-radius: 4px;
+    background: var(--cream);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 80px; }
+ 
+  .radio-group { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .radio-label {
+    display: flex; align-items: center; gap: 0.4rem;
+    cursor: pointer; font-size: 0.95rem; color: var(--brown);
+  }
+ 
+  .rsvp-success {
+    display: none;
+    text-align: center; padding: 2rem;
+    animation: fadeUp 0.4s ease;
+  }
+  .rsvp-success.visible { display: block; }
+  .rsvp-success .big-emoji { font-size: 4rem; margin-bottom: 1rem; }
+  .rsvp-success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; color: var(--deep); margin-bottom: 0.5rem;
+  }
+  .rsvp-success p { color: var(--brown); font-family: 'Caveat', cursive; font-size: 1.1rem; }
+ 
+   /* ── FOOTER ── */
+  footer {
+    background: var(--green);
+    text-align: center;
+    padding: 3rem 2rem;
+    border-top: 1px solid var(--lavender);
+  }
+  footer .f-names {
+    font-family: 'Dancing Script';
+    font-size: 2.5rem; color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  footer .f-date {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; color: var(--lavender);
+  }
+  footer .f-small {
+    font-size: 0.75rem; margin-top: 2rem;
+    color: rgba(232,196,176,0.4);
+    letter-spacing: 0.1em;
+  }
+ 
+  /* ── RESPONSIVE ── */
+  @media(max-width: 600px) {
+    .tables-grid { grid-template-columns: repeat(2, 1fr); }
+    .countdown-grid { gap: 1rem; }
+    .countdown-block { min-width: 70px; }
+    .countdown-num { font-size: 2.5rem; }
+    nav { gap: 1rem; font-size: 0.7rem; }
+    .snowflake-ring { width: 300px; height: 300px; }
+  }
