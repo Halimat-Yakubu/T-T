@@ -73,7 +73,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   font-size: 0.75rem; letter-spacing: 0.2em; 
   text-transform: uppercase; opacity: 0.8;
   margin-top: 32vh; color: var(--lightpink);
-  padding-bottom: 6rem; color: ;
+  padding-bottom: 6rem; 
 }
 
 .hero-date {
@@ -90,11 +90,9 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
  
 .snowflake-ring {
   position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  width: 520px; height: 520px;
+  width: 500px; height: 500px;
   border: 1px dashed rgba(77, 0, 17, 0.5);
   border-radius: 50%;
-  animation: slowSpin 60s linear infinite;
   z-index: 0;
   margin-top: 1.5rem;;
 }
@@ -105,8 +103,6 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   border: 1px dashed var(--lavender);
   border-radius: 50%;
 }
- 
-@keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
  
 #countdown {
   width: 100%; height: 95dvh;
@@ -432,7 +428,11 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   .table-tooltip strong { color: var(--gold-light); display: block; margin-bottom: 0.3rem; }
 
  /* ── FAQ ── */
-  #faq { max-width:100vw;  padding-left: 4.5rem; background: whitesmoke;} 
+  #faq { width: 90vw;  padding-left: 4.5rem;}
+  
+  .faqcontainer {
+    background-color: whitesmoke;
+  }
 
   #faq .section-label {
     padding-top: 3.5rem;
@@ -440,7 +440,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   }
 
   #faq .section-title {
-    display: block;
+    display: block; margin-bottom: 2.5rem;
     font-family: 'Playfair Display'; font-size: 2.2rem;
   }
  
@@ -488,9 +488,14 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
    
   }
 
-  #rsvp .section-label, #rsvp .section-title {
-    color: var(--green);
+   #rsvp .section-title {
+    color: var(--green); font-family: 'Dancing Script'; margin-top: 1rem; margin-bottom: 1.5rem;
   }
+
+   #rsvp .section-label {
+    color: var(--wine);
+    font-family: 'Playfair Display', serif;
+   }
  
   .form-group { margin-bottom: 1.5rem; }
   .form-group label {

@@ -11,42 +11,74 @@
 }
 
 .rsvp:hover {
-    border-radius: 50%;
-    border: 1px var(--lavender) solid;
+  border-radius: 50%;
+  border: 1px var(--lavender) solid;
 }
 
-.scroll-hint {
-    animation: bounce 2s ease-in-out infinite;
-  }
+.snowflake-ring {
+  transform: translate(-50%, -50%);
+  animation: slowSpin 60s linear infinite;
+}
 
-  @keyframes bounce {
-    0%,100% { transform: translateY(0); }
-    50% { transform: translateY(6px); }
-  }
+@keyframes slowSpin { to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+.scroll-hint { animation: bounce 2s ease-in-out infinite; }
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
  
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .ice-dots {
-    position: absolute; inset: 0; z-index: 0; pointer-events: none;
-    overflow: hidden;
-  }
-  .ice-dot {
-    position: absolute;
-    width: 4px; height: 4px;
-    background: var(--gold);
-    border-radius: 50%;
-    opacity: 0.4;
-    animation: twinkle 3s ease-in-out infinite;
+  position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  overflow: hidden;
+}
+
+.ice-dot {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: twinkle 3s ease-in-out infinite;
+}
+ 
+@keyframes twinkle {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 0.7; transform: scale(1.5); }
+}
+
+#countdown { text-align: center; position: relative; }
+
+  /* ── FAQ ── */
+ 
+  .faq-item {
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+    padding: 1.5rem 0;
   }
  
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.2; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.5); }
+  .faq-q {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: var(--wine);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    user-select: none;
   }
+  .faq-q .arrow {
+    color: var(--gold); transition: transform 0.2s; font-size: 1.2rem;
+  }
+  .faq-q.open .arrow { transform: rotate(180deg); }
+ 
+  .faq-a {
+    font-family: 'Dancing Script';
+    font-size: 1.3rem;
+    line-height: 1.7;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.2s;
+  }
+  .faq-a.open { max-height: 300px; padding-top: 1rem; }
 
-  #countdown { text-align: center; position: relative; }
-
-  
