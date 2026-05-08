@@ -106,10 +106,11 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
  
 #countdown {
   width: 100%; height: 95dvh;
-  text-align: center; padding-top: 7rem;
+  text-align: center; padding-top: 10rem;
   background-color: var(--lavender);
   font-family: 'Playfair Display', serif;
 }
+
 
 .section-label {
   font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 500; 
@@ -121,12 +122,12 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
 }
 
 .countdown-grid {
-  display: flex; justify-content: center; gap: 2rem; 
+  display: flex; justify-content: center; gap: 3rem; 
   flex-wrap: wrap; margin-top: 0;
 }
 
 .countdown-num {
-  font-size: clamp(5rem, 12vw, 13rem); font-family: 'Dancing Script';
+  font-size: clamp(5rem, 10vw, 13rem); font-family: 'Dancing Script';
   color: var(--wine);
 }
 
@@ -166,6 +167,9 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
 }
 
 .navcontainer li { margin-top: 4rem; }
+
+.navcontainer a {list-style: none; text-decoration: none; color: var(--lightpink);}
+
 
 .chapters-bg { display: grid; place-items: center; width: 80%; }
 
@@ -274,7 +278,6 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
 .seat-result {
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: var(--warm);
   border-radius: 4px;
   display: none;
 }
@@ -298,7 +301,6 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
     .seat-result {
     margin-top: 1.5rem;
     padding: 1.5rem;
-    background: var(--warm);
     border-radius: 4px;
     display: none;
   }
@@ -406,8 +408,8 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
     position: absolute;
     bottom: calc(100% + 10px);
     left: 50%; transform: translateX(-50%);
-    background: var(--deep);
-    color: var(--cream);
+    background: var(--wine);
+    color: var(--lavender);
     padding: 0.8rem 1rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -470,7 +472,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   .faq-a.open { max-height: 300px; padding-top: 1rem; }
 
 /* ── RSVP ── */
-  #rsvp { text-align: center; width: 100vw; background: whitesmoke; padding-top: 4rem;}
+  #rsvp { text-align: center; width: 100vw; background: whitesmoke; padding-top: 4rem; }
  
   .formcontainer {
     width: 100vw;
@@ -485,7 +487,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
     box-shadow: 0 2px 20px rgba(26,18,8,0.06);
     text-align: left;
     max-width: 720px;
-   
+    color: white;
   }
 
    #rsvp .section-title {
@@ -501,7 +503,7 @@ body { font-family: 'DM Sans', sans-serif;overflow-x: hidden; width: 100vw;}
   .form-group label {
     display: block; font-size: 0.8rem;
     letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--lightpink); margin-bottom: 0.5rem;
+    color: white; margin-bottom: 0.5rem;
   }
  
   .form-group input,

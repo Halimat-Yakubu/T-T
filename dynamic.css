@@ -1,4 +1,4 @@
-.nav-links a { transition: transform 0.3s ease;}
+
 
 .nav-links a:hover {
   color: var(--gold); 
@@ -9,6 +9,12 @@
   border: 1px var(--gold) solid;
 
 }
+
+
+.navcontainer a:hover { color: var(--gold); transform: translateY(-2px); }
+
+.navcontainer li:hover {transform: translateY(-2px); transition: transform 0.3s ease;}
+
 
 .rsvp:hover {
   border-radius: 50%;
