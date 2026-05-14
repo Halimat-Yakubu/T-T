@@ -88,3 +88,56 @@
   }
   .faq-a.open { max-height: 300px; padding-top: 1rem; }
 
+@media (max-width:1024px ){
+  #hero { background-color: rgb(46, 46, 112);}
+
+  .nav-links a { font-size: 0.8rem;  margin: 0; padding: 0; margin-right: 3vw;}
+
+  .rsvp {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  #countdown {
+    height: 90dvh;
+  }
+
+  .navcontainer ul {
+    font-size: 1.3rem;
+  }
+
+  .chapter1 h3, .chapter2 h3, .chapter3 h3, .chapter4 h3 {font-size: 2rem;}
+
+  .chapter1 p, .chapter2 p, .chapter3 p, .chapter4 p {font-size: 1.3rem;}
+
+  .aside {
+    font-size: 1.1rem;
+  }
+
+  .detail-icon {
+    font-size: 1.8rem;
+  }
+
+  .detail-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .detail-card p {font-size: 0.9rem;}
+}
+
+@media (max-width: 850px) {
+  .navbar-bg, .navcontainer {
+    display: none;
+  }
+
+  .story-container {
+    display: block;
+  }
+
+  .chapters-bg {
+    width: 100%;
+  }
+}
